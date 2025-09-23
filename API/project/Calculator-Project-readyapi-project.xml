@@ -1,0 +1,526 @@
+xml version=1.0 encoding=UTF-8
+consoapui-project id=0ec7aaae-b053-4be6-862c-ca3538d6d276 created=3.61.0 activeEnvironment=Default environment encryptionMode=Not encrypted name=Calculator_Project projectVersion= updated=3.61.0 2025-06-17T104249Z xmlnscon=httpeviware.comsoapuiconfig
+  consettings
+  coninterface xsitype=conWsdlInterface id=7b388f3c-a89b-4afa-a66a-ee1f595e8c48 wsaVersion=NONE name=CalculatorSoap12 type=wsdl bindingName={httptempuri.org}CalculatorSoap12 soapVersion=1_2 anonymous=optional definition=httpwww.dneonline.comcalculator.asmxwsdl xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+    consettings id=aac1b6f7-3fa6-4516-ad48-e909a72110c0
+    condefinitionCache type=TEXT rootPart=httpwww.dneonline.comcalculator.asmxwsdl
+      conpart
+        conurlhttpwww.dneonline.comcalculator.asmxwsdlconurl
+        concontent![CDATA[wsdldefinitions targetNamespace=httptempuri.org xmlnssoap=httpschemas.xmlsoap.orgwsdlsoap xmlnstm=httpmicrosoft.comwsdlmimetextMatching xmlnssoapenc=httpschemas.xmlsoap.orgsoapencoding xmlnsmime=httpschemas.xmlsoap.orgwsdlmime xmlnstns=httptempuri.org xmlnss=httpwww.w3.org2001XMLSchema xmlnssoap12=httpschemas.xmlsoap.orgwsdlsoap12 xmlnshttp=httpschemas.xmlsoap.orgwsdlhttp xmlnswsdl=httpschemas.xmlsoap.orgwsdl
+  wsdltypes
+    sschema elementFormDefault=qualified targetNamespace=httptempuri.org
+      selement name=Add
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=intA type=sint
+            selement minOccurs=1 maxOccurs=1 name=intB type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=AddResponse
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=AddResult type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=Subtract
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=intA type=sint
+            selement minOccurs=1 maxOccurs=1 name=intB type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=SubtractResponse
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=SubtractResult type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=Multiply
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=intA type=sint
+            selement minOccurs=1 maxOccurs=1 name=intB type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=MultiplyResponse
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=MultiplyResult type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=Divide
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=intA type=sint
+            selement minOccurs=1 maxOccurs=1 name=intB type=sint
+          ssequence
+        scomplexType
+      selement
+      selement name=DivideResponse
+        scomplexType
+          ssequence
+            selement minOccurs=1 maxOccurs=1 name=DivideResult type=sint
+          ssequence
+        scomplexType
+      selement
+    sschema
+  wsdltypes
+  wsdlmessage name=AddSoapIn
+    wsdlpart name=parameters element=tnsAdd
+  wsdlmessage
+  wsdlmessage name=AddSoapOut
+    wsdlpart name=parameters element=tnsAddResponse
+  wsdlmessage
+  wsdlmessage name=SubtractSoapIn
+    wsdlpart name=parameters element=tnsSubtract
+  wsdlmessage
+  wsdlmessage name=SubtractSoapOut
+    wsdlpart name=parameters element=tnsSubtractResponse
+  wsdlmessage
+  wsdlmessage name=MultiplySoapIn
+    wsdlpart name=parameters element=tnsMultiply
+  wsdlmessage
+  wsdlmessage name=MultiplySoapOut
+    wsdlpart name=parameters element=tnsMultiplyResponse
+  wsdlmessage
+  wsdlmessage name=DivideSoapIn
+    wsdlpart name=parameters element=tnsDivide
+  wsdlmessage
+  wsdlmessage name=DivideSoapOut
+    wsdlpart name=parameters element=tnsDivideResponse
+  wsdlmessage
+  wsdlportType name=CalculatorSoap
+    wsdloperation name=Add
+      wsdldocumentationAdds two integers. This is a test WebService. ©DNE Onlinewsdldocumentation
+      wsdlinput message=tnsAddSoapIn
+      wsdloutput message=tnsAddSoapOut
+    wsdloperation
+    wsdloperation name=Subtract
+      wsdlinput message=tnsSubtractSoapIn
+      wsdloutput message=tnsSubtractSoapOut
+    wsdloperation
+    wsdloperation name=Multiply
+      wsdlinput message=tnsMultiplySoapIn
+      wsdloutput message=tnsMultiplySoapOut
+    wsdloperation
+    wsdloperation name=Divide
+      wsdlinput message=tnsDivideSoapIn
+      wsdloutput message=tnsDivideSoapOut
+    wsdloperation
+  wsdlportType
+  wsdlbinding name=CalculatorSoap type=tnsCalculatorSoap
+    soapbinding transport=httpschemas.xmlsoap.orgsoaphttp
+    wsdloperation name=Add
+      soapoperation soapAction=httptempuri.orgAdd style=document
+      wsdlinput
+        soapbody use=literal
+      wsdlinput
+      wsdloutput
+        soapbody use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Subtract
+      soapoperation soapAction=httptempuri.orgSubtract style=document
+      wsdlinput
+        soapbody use=literal
+      wsdlinput
+      wsdloutput
+        soapbody use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Multiply
+      soapoperation soapAction=httptempuri.orgMultiply style=document
+      wsdlinput
+        soapbody use=literal
+      wsdlinput
+      wsdloutput
+        soapbody use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Divide
+      soapoperation soapAction=httptempuri.orgDivide style=document
+      wsdlinput
+        soapbody use=literal
+      wsdlinput
+      wsdloutput
+        soapbody use=literal
+      wsdloutput
+    wsdloperation
+  wsdlbinding
+  wsdlbinding name=CalculatorSoap12 type=tnsCalculatorSoap
+    soap12binding transport=httpschemas.xmlsoap.orgsoaphttp
+    wsdloperation name=Add
+      soap12operation soapAction=httptempuri.orgAdd style=document
+      wsdlinput
+        soap12body use=literal
+      wsdlinput
+      wsdloutput
+        soap12body use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Subtract
+      soap12operation soapAction=httptempuri.orgSubtract style=document
+      wsdlinput
+        soap12body use=literal
+      wsdlinput
+      wsdloutput
+        soap12body use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Multiply
+      soap12operation soapAction=httptempuri.orgMultiply style=document
+      wsdlinput
+        soap12body use=literal
+      wsdlinput
+      wsdloutput
+        soap12body use=literal
+      wsdloutput
+    wsdloperation
+    wsdloperation name=Divide
+      soap12operation soapAction=httptempuri.orgDivide style=document
+      wsdlinput
+        soap12body use=literal
+      wsdlinput
+      wsdloutput
+        soap12body use=literal
+      wsdloutput
+    wsdloperation
+  wsdlbinding
+  wsdlservice name=Calculator
+    wsdlport name=CalculatorSoap binding=tnsCalculatorSoap
+      soapaddress location=httpwww.dneonline.comcalculator.asmx
+    wsdlport
+    wsdlport name=CalculatorSoap12 binding=tnsCalculatorSoap12
+      soap12address location=httpwww.dneonline.comcalculator.asmx
+    wsdlport
+  wsdlservice
+wsdldefinitions]]concontent
+        contypehttpschemas.xmlsoap.orgwsdlcontype
+      conpart
+    condefinitionCache
+    conendpoints
+      conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+    conendpoints
+    conoperation id=fbb5e781-fc7b-40ee-9612-85af9845b94d isOneWay=false action=httptempuri.orgAdd name=Add bindingOperationName=Add type=Request-Response inputName= receivesAttachments=false sendsAttachments=false anonymous=optional
+      consettings
+      concall id=428d36fc-0ed8-46c4-8c1c-82db43d61500 name=Add Request
+        consettings
+        conencodingUTF-8conencoding
+        conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+        conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temAddr
+         temintAtemintAr
+         temintBtemintBr
+      temAddr
+   soapBodyr
+soapEnvelope]]conrequest
+        concredentials
+          conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+          conauthTypeNo AuthorizationconauthType
+        concredentials
+        conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapAddRequest
+      concall
+    conoperation
+    conoperation id=1d00ea16-e75b-4af2-b69c-0e6efb560603 isOneWay=false action=httptempuri.orgDivide name=Divide bindingOperationName=Divide type=Request-Response inputName= receivesAttachments=false sendsAttachments=false anonymous=optional
+      consettings
+      concall id=003dc9d2-a4ca-4ef8-a463-089329273200 name=Divide Request
+        consettings
+        conencodingUTF-8conencoding
+        conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+        conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temDivider
+         temintAtemintAr
+         temintBtemintBr
+      temDivider
+   soapBodyr
+soapEnvelope]]conrequest
+        concredentials
+          conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+          conauthTypeNo AuthorizationconauthType
+        concredentials
+        conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapDivideRequest
+      concall
+    conoperation
+    conoperation id=3be6f58a-8891-4f01-afa0-48c361bd8429 isOneWay=false action=httptempuri.orgMultiply name=Multiply bindingOperationName=Multiply type=Request-Response inputName= receivesAttachments=false sendsAttachments=false anonymous=optional
+      consettings
+      concall id=e92ade67-389f-4dbe-bfc4-23032dada1c6 name=Multiply Request
+        consettings
+        conencodingUTF-8conencoding
+        conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+        conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temMultiplyr
+         temintAtemintAr
+         temintBtemintBr
+      temMultiplyr
+   soapBodyr
+soapEnvelope]]conrequest
+        concredentials
+          conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+          conauthTypeNo AuthorizationconauthType
+        concredentials
+        conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapMultiplyRequest
+      concall
+    conoperation
+    conoperation id=a2493d74-cf0f-41e0-877a-0378901d58f1 isOneWay=false action=httptempuri.orgSubtract name=Subtract bindingOperationName=Subtract type=Request-Response inputName= receivesAttachments=false sendsAttachments=false anonymous=optional
+      consettings
+      concall id=69e1bdbd-1e1e-455d-89d3-756ea18a67ca name=Subtract Request
+        consettings
+        conencodingUTF-8conencoding
+        conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+        conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temSubtractr
+         temintAtemintAr
+         temintBtemintBr
+      temSubtractr
+   soapBodyr
+soapEnvelope]]conrequest
+        concredentials
+          conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+          conauthTypeNo AuthorizationconauthType
+        concredentials
+        conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapSubtractRequest
+      concall
+    conoperation
+  coninterface
+  contestSuite id=dca0c5f3-da6c-4ace-a57c-1cabfcd6af46 name=Project_Calculator
+    consettings id=e927a9be-da4d-4b64-8efc-7adeeb8b3374
+    conrunTypeSEQUENTIALconrunType
+    contestCase id=5ef838a7-d260-4bb2-a7b5-21287521a4cb discardOkResults=false failOnError=false failTestCaseOnErrors=true keepSession=false name=Project 1 Test Case 1 searchProperties=true timeout=0
+      consettings
+      contestStep type=request id=6b70af5a-c4af-4733-8413-81c2b74c4fe8 name=CalculatorSoap12 Add-Add Request
+        consettings
+        conconfig xsitype=conRequestStep xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+          coninterfaceCalculatorSoap12coninterface
+          conoperationAddconoperation
+          conrequest name=CalculatorSoap12 Add-Add Request outgoingWss= incomingWss= timeout= sslKeystore= useWsAddressing=false useWsReliableMessaging=false wssPasswordType= id=6cda39ac-1bf1-4aa4-b24d-c035d9103816
+            consettings
+              consetting id=com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers&lt;xml-fragmentconsetting
+            consettings
+            conencodingUTF-8conencoding
+            conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+            conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temAddr
+         temintA50temintAr
+         temintB50temintBr
+      temAddr
+   soapBodyr
+soapEnvelope]]conrequest
+            conassertion type=SOAP Response id=b7df4f8d-b8ed-4216-9506-381ec0640ee5 name=SOAP Response
+            conassertion type=Valid HTTP Status Codes id=901bb3d9-b9ed-46f8-b199-278b8c945938 name=Valid HTTP Status Codes
+              consettings
+              conconfiguration
+                codes200codes
+              conconfiguration
+            conassertion
+            conassertion type=Schema Compliance id=bef391f2-3203-4151-8ede-575565f57ff5 name=Schema Compliance
+              conconfiguration
+            conassertion
+            conassertion type=SOAP Fault Assertion id=bebed6aa-e91e-4863-af06-4235d63712f4 name=Not SOAP Fault
+            conassertion type=XPath Match id=77f755a9-1464-4fa7-acad-626e9438595d name=XPath Match
+              conconfiguration
+                pathdeclare namespace ns1='httptempuri.org';
+ns1AddResultpath
+                content100content
+                allowWildcardsfalseallowWildcards
+                ignoreNamspaceDifferencesfalseignoreNamspaceDifferences
+                ignoreCommentsfalseignoreComments
+              conconfiguration
+            conassertion
+            concredentials
+              conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+              conauthTypeNo AuthorizationconauthType
+            concredentials
+            conjmsConfig JMSDeliveryMode=PERSISTENT
+            conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapAddRequest
+            conwsrmConfig version=1.2
+          conrequest
+        conconfig
+      contestStep
+      contestStep type=request id=e58c72df-ca06-4614-bf3d-e6b40ab19a81 name=CalculatorSoap12 Divide-Divide Request
+        consettings
+        conconfig xsitype=conRequestStep xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+          coninterfaceCalculatorSoap12coninterface
+          conoperationDivideconoperation
+          conrequest name=CalculatorSoap12 Divide-Divide Request outgoingWss= incomingWss= timeout= sslKeystore= useWsAddressing=false useWsReliableMessaging=false wssPasswordType= id=20902e59-416c-4610-a95c-347c3c13b777
+            consettings
+              consetting id=com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers&lt;xml-fragmentconsetting
+            consettings
+            conencodingUTF-8conencoding
+            conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+            conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temDivider
+         temintA10temintAr
+         temintB2temintBr
+      temDivider
+   soapBodyr
+soapEnvelope]]conrequest
+            conassertion type=SOAP Response id=c51b80dd-51bb-43a4-8a60-8fb591c390b7 name=SOAP Response
+            conassertion type=Valid HTTP Status Codes id=5723111f-b135-4d78-a897-e5c9b7323d6a name=Valid HTTP Status Codes
+              consettings
+              conconfiguration
+                codes200codes
+              conconfiguration
+            conassertion
+            conassertion type=Schema Compliance id=93c2dae1-9ccf-4b68-8322-690ac29f6fff name=Schema Compliance
+              conconfiguration
+            conassertion
+            conassertion type=SOAP Fault Assertion id=c8c58907-f41c-47f7-860a-5e424330d734 name=Not SOAP Fault
+            concredentials
+              conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+              conauthTypeNo AuthorizationconauthType
+            concredentials
+            conjmsConfig JMSDeliveryMode=PERSISTENT
+            conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapDivideRequest
+            conwsrmConfig version=1.2
+          conrequest
+        conconfig
+      contestStep
+      contestStep type=request id=ec2326af-35e8-4545-a35f-5ce90d4da359 name=CalculatorSoap12 Multiply-Multiply Request
+        consettings
+        conconfig xsitype=conRequestStep xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+          coninterfaceCalculatorSoap12coninterface
+          conoperationMultiplyconoperation
+          conrequest name=CalculatorSoap12 Multiply-Multiply Request outgoingWss= incomingWss= timeout= sslKeystore= useWsAddressing=false useWsReliableMessaging=false wssPasswordType= id=daeee0b4-2ee0-49f5-b846-8bf402bd2ecb
+            consettings
+              consetting id=com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers&lt;xml-fragmentconsetting
+            consettings
+            conencodingUTF-8conencoding
+            conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+            conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temMultiplyr
+         temintA5temintAr
+         temintB5temintBr
+      temMultiplyr
+   soapBodyr
+soapEnvelope]]conrequest
+            conassertion type=SOAP Response id=7c038c8a-aefd-465c-9cb5-cee8addffff4 name=SOAP Response
+            conassertion type=Valid HTTP Status Codes id=7ab44cda-2ba2-48a1-b016-b56357a47ac3 name=Valid HTTP Status Codes
+              consettings
+              conconfiguration
+                codes200codes
+              conconfiguration
+            conassertion
+            conassertion type=Schema Compliance id=0e0f609e-e993-4652-bdcb-dac5ff4f8296 name=Schema Compliance
+              conconfiguration
+            conassertion
+            conassertion type=SOAP Fault Assertion id=722970db-2938-45ba-aaea-e6360a0569d1 name=Not SOAP Fault
+            concredentials
+              conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+              conauthTypeNo AuthorizationconauthType
+            concredentials
+            conjmsConfig JMSDeliveryMode=PERSISTENT
+            conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapMultiplyRequest
+            conwsrmConfig version=1.2
+          conrequest
+        conconfig
+      contestStep
+      contestStep type=request id=144bee34-0ede-464c-9224-b5d90746aa64 name=CalculatorSoap12 Subtract-Subtract Request
+        consettings
+        conconfig xsitype=conRequestStep xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+          coninterfaceCalculatorSoap12coninterface
+          conoperationSubtractconoperation
+          conrequest name=CalculatorSoap12 Subtract-Subtract Request outgoingWss= incomingWss= timeout= sslKeystore= useWsAddressing=false useWsReliableMessaging=false wssPasswordType= id=b91b56a1-4273-4346-b2ff-d8f83b749b62
+            consettings
+              consetting id=com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers&lt;xml-fragmentconsetting
+            consettings
+            conencodingUTF-8conencoding
+            conendpointhttpwww.dneonline.comcalculator.asmxconendpoint
+            conrequest![CDATA[soapEnvelope xmlnssoap=httpwww.w3.org200305soap-envelope xmlnstem=httptempuri.orgr
+   soapHeaderr
+   soapBodyr
+      temSubtractr
+         temintA10temintAr
+         temintB3temintBr
+      temSubtractr
+   soapBodyr
+soapEnvelope]]conrequest
+            conassertion type=SOAP Response id=b1bef4d9-fa76-424d-8493-ab6eee62d688 name=SOAP Response
+            conassertion type=Valid HTTP Status Codes id=992b33fc-20bb-4c64-b711-d9f4974006b9 name=Valid HTTP Status Codes
+              consettings
+              conconfiguration
+                codes200codes
+              conconfiguration
+            conassertion
+            conassertion type=Schema Compliance id=da578911-e175-40ec-a593-217c678e74ee name=Schema Compliance
+              conconfiguration
+            conassertion
+            conassertion type=SOAP Fault Assertion id=bfc5720f-9caa-4bb4-adf2-a478bea4f14f name=Not SOAP Fault
+            concredentials
+              conselectedAuthProfileNo AuthorizationconselectedAuthProfile
+              conauthTypeNo AuthorizationconauthType
+            concredentials
+            conjmsConfig JMSDeliveryMode=PERSISTENT
+            conwsaConfig mustUnderstand=NONE version=200508 action=httptempuri.orgCalculatorSoapSubtractRequest
+            conwsrmConfig version=1.2
+          conrequest
+        conconfig
+      contestStep
+      conproperties
+      conreportParameters
+    contestCase
+    conproperties
+    conreportParameters
+  contestSuite
+  conrequirements
+  conproperties
+  conwssContainer
+  condatabaseConnectionContainer
+  conjmsConnectionContainer
+  conoAuth2ProfileContainer
+  conoAuth1ProfileContainer
+  conreporting
+    conxmlTemplates
+    conparameters
+  conreporting
+  coneventHandlers type=RequestFilter.filterRequest name=RequestFilter.filterRequest
+    conscript Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+ This code is often used for adding custom authentication to ReadyAPI functional tests
+
+ If hardcoding the token, uncomment and change line 5
+ token = '4567'
+
+ If your token is parameterized in Project level custom property, uncomment line 8
+ token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+ To modify all outgoing calls, remove comments from lines 11 to 16
+ headers = request.requestHeaders
+ if (headers.containsKey('auth_token2') == false) {
+   headers.put('auth_token2', token)
+   request.requestHeaders = headers
+ }conscript
+  coneventHandlers
+  coneventHandlers type=TestRunListener.afterStep name=TestRunListener.afterStep
+    conscript Save all test step results into files
+ Change the directory path in line 5 to a location where you want to store details
+ then uncomment lines 5 to 10
+
+ filePath = 'CtempOutputDirectory'
+ fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+ pw = new java.io.PrintWriter(fos)
+ testStepResult.writeTo(pw)
+ pw.close()
+ fos.close()conscript
+  coneventHandlers
+  conauthRepository
+  contags
+consoapui-project
