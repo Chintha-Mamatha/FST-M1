@@ -28,7 +28,7 @@ public class Activity1 {
 		options.setPlatformName("android");
 		options.setAutomationName("UiAutomator2");
 		options.noReset();
-		options.setApp("C:/Users/003TCT744/Documents/WFS/Automation/FST/Calculator.apk");
+		options.setApp("C:/Users/Mamatha/Documents/WFS/Automation/FST/Calculator.apk");
 		
 		//Set Appium server URL
 		URL serverUrl = new URI("http://localhost:4723").toURL();
@@ -53,3 +53,4 @@ public class Activity1 {
 
 
 }
+
